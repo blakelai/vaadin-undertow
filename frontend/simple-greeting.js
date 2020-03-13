@@ -7,7 +7,12 @@ class SimpleGreeting extends LitElement {
         }
     }
     render() {
-        return html`<p>Hello, ${this.name}</p>`;
+        return html`
+            <p>Hello, ${this.name}</p>
+            <h3>Select a person</h3>
+            <slot name="grid"></slot>
+            <button @click="${e => this.$server.morePerson()}">More</button>
+        `;
     }
 }
 customElements.define('simple-greeting', SimpleGreeting);
