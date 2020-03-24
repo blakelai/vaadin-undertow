@@ -1,5 +1,6 @@
 package com.github.blakelai.views;
 
+import com.github.blakelai.components.GoogleSignInComponent;
 import com.github.blakelai.components.SimpleGreetingComponent;
 import com.github.blakelai.services.GreetService;
 import com.vaadin.flow.component.Key;
@@ -43,6 +44,7 @@ public class MainView extends VerticalLayout {
 
         add(textField, button);
 
+        add(new GoogleSignInComponent());
         add(new SimpleGreetingComponent());
     }
 }
